@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#header{
+  color:white;
+  height: 60vh;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia-cdn.tripadvisor.com%2Fmedia%2Fphoto-s%2F12%2Fd5%2Fbc%2F2a%2Fpebbles-bar-and-grill.jpg&f=1&nofb=1");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
