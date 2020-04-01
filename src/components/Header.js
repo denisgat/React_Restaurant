@@ -1,14 +1,15 @@
 import React from 'react';
 
-function Header(){
+function Header() {
     return (
-        <div id="header">
-            <h1 
-            className="text-center py-5"
-            style={{}}
-            >
-            Gatlins Bar & Grill
-            </h1>
+        <div>
+            <nav className="navbar">
+               <h1 className="float-left">Gatlins Bar & Grill </h1> 
+               <h6 className="float-right">Contact</h6> 
+               <h6 className="float-right">Reserve </h6>
+            </nav>
+            <div id="header">
+            </div>
         </div>
     )
 }

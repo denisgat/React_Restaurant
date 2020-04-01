@@ -1,8 +1,9 @@
 import React from 'react';
 import Header from './Header';
-// import Menu from './Menu'
+import MenuList from './Menu'
 import Footer from './Footer';
 const axios = require('axios').default;
+
 
 class Main extends React.Component {
     constructor(props){
@@ -17,19 +18,28 @@ class Main extends React.Component {
     }
 
     componentDidMount(){
+        if (window.localStorage.menuObj){
+            this.setState({
+              menuObj: JSON.parse(window.localStorage.menuObj)
+            })
+          }
+        else{
         this.pullMenu();
+        }
+
         // console.log(this.state.menuObj)
     }
 
     componentDidUpdate(){
         //setup local Storage
-        if(this.state.menuObj.length >= 59) {
-            console.log("Ready to go") 
-        }
-        else{
+        if(this.state.menuObj.length < 59) {
             this.pullMenu();
         }
-        console.log(this.state.menuObj)
+        else{
+            // this.pullMenu();
+            window.localStorage.setItem('menuObj', JSON.stringify(this.state.menuObj))
+            console.log(this.state.menuObj)
+        }
     }
 
     async pullMenu(){
@@ -75,7 +85,7 @@ class Main extends React.Component {
         return (
             <div>
                 <Header/>
-                {/* <Menu/> */}
+                <MenuList menuObj= {this.state.menuObj}/>
                 <Footer/>
             </div>
         )
