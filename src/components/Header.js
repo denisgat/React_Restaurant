@@ -1,15 +1,69 @@
 import React from 'react';
+// import React, { useState } from 'react';=
+import {
+    Navbar,
+    Nav,
+    NavDropdown,
+    Carousel,
+}
+    from 'react-bootstrap';
 
 function Header() {
     return (
         <div>
-            <nav className="navbar">
-               <h1 className="float-left">Gatlins Bar & Grill </h1> 
-               <h6 className="float-right">Contact</h6> 
-               <h6 className="float-right">Reserve </h6>
-            </nav>
-            <div id="header">
-            </div>
+            <Navbar className="sticky-top" collapseOnSelect expand="lg" bg="dark" variant="dark">
+                <Navbar.Brand href="#"><i className="fas fa-camera"></i><h2>GATLINS BAR & GRILL</h2><i className="fas fa-camera"></i></Navbar.Brand>
+                <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="ml-auto">
+                        <NavDropdown className="mx-3" title="Menu" id="collasible-nav-dropdown">
+                            <NavDropdown.Item href="#Specials">Specials</NavDropdown.Item>
+                            <NavDropdown.Item href="#Appetizers">Appetizers</NavDropdown.Item>
+                            <NavDropdown.Item href="#MainCourse">Main Course</NavDropdown.Item>
+                            <NavDropdown.Item href="#KidsMenu">Kids Menu</NavDropdown.Item>
+                            <NavDropdown.Item href="#Sides">Sides</NavDropdown.Item>
+                            <NavDropdown.Item href="#Drinks">Drinks</NavDropdown.Item>
+                        </NavDropdown>
+                        <Nav.Link className="mx-3" href="#footer">Contact</Nav.Link>
+                        <Nav.Link className="mx-3" eventKey={2} href="#reserve">Reserve</Nav.Link>
+                    </Nav>
+                </Navbar.Collapse>
+            </Navbar>
+
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 h-90"
+                        src="https://upserve.com/media/sites/2/bigstock-125615822-1100x600.jpg"
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h3>Michelen star chef selected menu items for all to love</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 h-90"
+                        src="https://www.rd.com/wp-content/uploads/2018/12/drinks-at-a-bar-shutterstock_607933634.jpg"
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>Drinks Served everyday of the week!</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block w-100 h-90"
+                        src="https://foodies.co.uk/wp-content/uploads/2018/10/Festive-menu-Hotel-du-Vin-3-1920x1280.jpg"
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h3>No ingredients spared to create amazing food items and drink concoctions</h3>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
         </div>
     )
 }

@@ -1,8 +1,10 @@
 import React from 'react';
 import Header from './Header';
+import Reserve from './Reserve';
 import MenuList from './Menu'
 import Footer from './Footer';
 const axios = require('axios').default;
+// import React, { useState } from 'react';
 
 
 class Main extends React.Component {
@@ -85,6 +87,7 @@ class Main extends React.Component {
         return (
             <div>
                 <Header/>
+                <Reserve/>
                 <MenuList menuObj= {this.state.menuObj}/>
                 <Footer/>
             </div>
