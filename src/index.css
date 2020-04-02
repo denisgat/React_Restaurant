@@ -30,7 +30,11 @@ nav{
 #footer{
   color: white;
   background-color: black;
-  height: 20vh;
+  /* height: 30vh; */
 }
 
+#tophead{
+    text-shadow: 10px 10px 10px white;
+    font-weight: bold;
+}
 

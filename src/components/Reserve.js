@@ -60,7 +60,7 @@ function Reserve() {
     return (
         <div>
             <br></br>
-            <h1 className="text-center">Reserve your seat today!</h1>
+            <h1 id="reserve" className="text-center">Reserve your seat today!</h1>
             <br></br>
             <FormItem />
         </div>

@@ -12,7 +12,7 @@ function Header() {
     return (
         <div>
             <Navbar className="sticky-top" collapseOnSelect expand="lg" bg="dark" variant="dark">
-                <Navbar.Brand href="#"><i className="fas fa-camera"></i><h2>GATLINS BAR & GRILL</h2><i className="fas fa-camera"></i></Navbar.Brand>
+                <Navbar.Brand href="#" id="tophead"><h2>GATLINS BAR & GRILL</h2></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
@@ -30,12 +30,15 @@ function Header() {
                 </Navbar.Collapse>
             </Navbar>
 
-            <Carousel>
+            <Carousel style={{height: "90vh"}}>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 h-90"
+                        className="d-block w-100"
+                        // src="./images/img1-2.jpg"
+
                         src="https://upserve.com/media/sites/2/bigstock-125615822-1100x600.jpg"
                         alt="First slide"
+                        style={{height: "90vh"}}
                     />
                     <Carousel.Caption>
                         <h3>Michelen star chef selected menu items for all to love</h3>
@@ -43,9 +46,10 @@ function Header() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 h-90"
+                        className="d-block w-100"
                         src="https://www.rd.com/wp-content/uploads/2018/12/drinks-at-a-bar-shutterstock_607933634.jpg"
                         alt="Third slide"
+                        style={{height: "90vh"}}
                     />
 
                     <Carousel.Caption>
@@ -54,9 +58,10 @@ function Header() {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        className="d-block w-100 h-90"
+                        className="d-block w-100"
                         src="https://foodies.co.uk/wp-content/uploads/2018/10/Festive-menu-Hotel-du-Vin-3-1920x1280.jpg"
                         alt="Third slide"
+                        style={{height: "90vh"}}
                     />
 
                     <Carousel.Caption>
